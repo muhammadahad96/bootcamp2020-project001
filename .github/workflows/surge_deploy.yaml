@@ -10,7 +10,7 @@ jobs:
 
       - run: echo "Setting up Node JS"
       - name: 'Setup Node JS'
-      - uses: actions/setup-node@master
+        uses: actions/setup-node@master
         with:
           node-version: 12
 
