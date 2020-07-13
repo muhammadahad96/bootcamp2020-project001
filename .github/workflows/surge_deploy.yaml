@@ -16,4 +16,4 @@ jobs:
 
       - run: npm install -g surge
       - run: echo "Deploying project"
-      - run: surge ./ bootcamp2020-project001_muhammadahad9615.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - run: surge ./ bootcamp2020-project001.surge.sh --token ${{ secrets.PROJECT001_SURGE_TOKEN }}
