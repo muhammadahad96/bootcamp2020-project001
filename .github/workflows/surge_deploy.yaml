@@ -1,0 +1,19 @@
+name: Deploy on Surge
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - run: echo "Setting up Node JS"
+      - name: 'Setup Node JS'
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - run: npm install -g surge
+      - run: echo "Deploying project"
+      - run: surge ./ bootcamp2020-project001_muhammadahad9615.surge.sh --token ${{ secrets.SURGE_TOKEN }}
